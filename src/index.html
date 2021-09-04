@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="./index.js"></script>
+    <title>the time is now</title>
+</head>
+<body>
+    <div class="container">
+      <div class="content">
+        <div class="circle" id="circle"></div>
+        <div class="pointer" id="pointer"></div>
+      </div>
+      <div class="btn-content">
+        <button id="stop-btn">stop</button>
+        <button id="start-btn">start</button>
+      </div>
+      <div class="msg-content">
+        <span id="msg-box"></span>
+      </div>
+    </div>
+</body>
+</html>
+
+<style>
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .content {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .circle {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    /* border: 11px solid gray; */
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: #000000;
+  }
+  .circle::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+  }
+  .pointer {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    /* animation: rotate-demo-2 1.5s infinite linear; */
+  }
+  .pointer::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 50%;
+    background-color: green;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @keyframes rotate-demo-2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+  .msg-content {
+    height: 30px;
+  }
+</style>
