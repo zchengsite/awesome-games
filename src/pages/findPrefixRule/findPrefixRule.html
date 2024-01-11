@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="./findPrefixRule.js"></script>
+  <title>findPrefixRule</title>
+</head>
+<body>
+  <h3>输入开始数字、结束数字，生成这串数字的前缀占用规则</h3>
+  <p>注意：有以下任意情况，此工具不适用</p>
+  <p>1、0开头的号段</p>
+  <p>2、非连续号段，中间出现断号情况</p>
+  开始数字：<input type="number" min="1" id="start" value="start">
+  结束数字：<input type="number" min="1" id="end" value="end">
+  <button id="executeBtn">执行</button>
+  <br>
+  执行结果：<div id="resultTxt"></div>
+</body>
+</html>
